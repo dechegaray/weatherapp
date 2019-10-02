@@ -1,0 +1,32 @@
+.weather-stats-item {
+  display: flex;
+  text-align: left;
+}
+
+.weather-stats-item > div.weather-stats-bar {
+  width: 2px;
+  height: 80px;
+  margin-right: 5px;
+  vertical-align: bottom;
+  background-color: #e0e0e0;
+}
+
+.weather-stats-item > div.weather-stats-bar > div {
+  width: 2px;
+}
+
+.weather-stats-item > div.weather-stats-text {
+  /*to be defined*/
+}
+
+.weather-stats-item span {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.weather-stats-item p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 0 0;
+}
