@@ -1,14 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 
 const navbarLink = props => {
-  const {link, label, icon, onSelectNavLink} = props
+  const {link, label, icon, activePage, onSelectNavLink} = props
+  const highlighterClass =
+    activePage === label ? 'highlighter active' : 'highlighter'
 
   return (
     <li onClick={() => onSelectNavLink(label)}>
       <a href={link}>
-        <i className={icon}></i>
-        {label}
+        <FontAwesomeIcon icon={icon} />
+        <p>{label}</p>
+        <div className={highlighterClass}></div>
       </a>
     </li>
   )

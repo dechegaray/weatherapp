@@ -1,0 +1,50 @@
+:root {
+  --default-gray: #aaaaaa;
+  --default-primary: #6666666;
+  --default-dark-gray: #333333;
+}
+
+.weather-daily-forecast {
+  width: 100%;
+  padding: 0;
+  margin: 15px 0;
+  list-style: none;
+  display: inline-block;
+}
+
+.weather-daily-forecast > li {
+  width: 100%;
+  display: flex;
+  margin: 0 0 15px 0;
+}
+
+.weather-daily-forecast > li > div {
+  flex: 1;
+}
+
+.weather-daily-forecast > li > div.multiline {
+  /*text-align: left;*/
+}
+
+.weather-daily-forecast > li > div > svg {
+  margin-top: 10px;
+}
+
+.weather-daily-forecast > li > div > p {
+  font-size: 0.7em;
+  margin: 0 0 5px 0;
+  color: var(--default-gray);
+}
+
+.weather-daily-forecast > li > div > p.temperature {
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  color: var(--default-primary);
+}
+
+.weather-daily-forecast > li > div > span {
+  font-size: 0.8em;
+  font-weight: bold;
+  color: var(--default-dark-gray);
+}

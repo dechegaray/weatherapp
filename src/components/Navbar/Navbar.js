@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import NavbarLink from './NavbarLink'
+import './Navbar.css'
 
 const HOME_PAGE_ID = 'Home'
 const LOCATION_PAGE_ID = 'Location'
@@ -21,24 +22,29 @@ class Navbar extends Component {
   }
 
   render() {
+    const {activePage} = this.state
+
     return (
-      <ul>
+      <ul className="navbar">
         <NavbarLink
           link={'/home'}
           label={HOME_PAGE_ID}
-          icon={'fa fa-home'}
+          icon="home"
+          activePage={activePage}
           onSelectNavLink={this.handleNavClick}
         />
         <NavbarLink
           link={'/location'}
           label={LOCATION_PAGE_ID}
-          icon={'fa fa-location'}
+          icon="compass"
+          activePage={activePage}
           onSelectNavLink={this.handleNavClick}
         />
         <NavbarLink
           link={'/settings'}
           label={SETTINGS_PAGE_ID}
-          icon={'fa fa-gear'}
+          icon="cog"
+          activePage={activePage}
           onSelectNavLink={this.handleNavClick}
         />
       </ul>

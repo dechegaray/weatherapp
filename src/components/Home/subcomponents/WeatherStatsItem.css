@@ -1,22 +1,31 @@
 .weather-stats-item {
+  flex: 1;
   display: flex;
   text-align: left;
 }
 
 .weather-stats-item > div.weather-stats-bar {
-  width: 2px;
-  height: 80px;
-  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 3px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
   vertical-align: bottom;
-  background-color: #e0e0e0;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .weather-stats-item > div.weather-stats-bar > div {
-  width: 2px;
+  width: 3px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
 }
 
 .weather-stats-item > div.weather-stats-text {
-  /*to be defined*/
+  margin: 0 0 0 10px;
 }
 
 .weather-stats-item span {

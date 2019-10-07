@@ -5,7 +5,7 @@ import WeatherStats from './subcomponents/WeatherStats'
 import HourlyForecast from './subcomponents/HourlyForecast'
 import DailyForecast from './subcomponents/DailyForecast'
 
-import {fetchCurrentAndForecastWeatherByLocation} from '../../utils/api'
+import {mockFetchCurrentAndForecastWeatherByLocation} from '../../utils/api'
 
 class Home extends Component {
   constructor(props) {
@@ -23,7 +23,9 @@ class Home extends Component {
   componentDidMount() {
     console.log('[COMPONENT DID MOUNT]')
     const {location} = this.state
-    fetchCurrentAndForecastWeatherByLocation(location)
+
+    //fetchCurrentAndForecastWeatherByLocation(location)
+    mockFetchCurrentAndForecastWeatherByLocation(location)
       .then(data => {
         const {currentWeather, hourlyForecast, dailyForecast} = data
 
@@ -53,7 +55,7 @@ class Home extends Component {
     }
 
     return (
-      <div>
+      <div className="home-wrapper">
         {currentWeather ? (
           <div>
             <Illustration

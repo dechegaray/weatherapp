@@ -3,6 +3,8 @@ import moment from 'moment'
 import PropTypes from 'prop-types'
 import DailyForecastItem from './DailyForecastItem'
 
+import './DailyForecast.css'
+
 const dailyForecast = props => {
   const {forecastList} = props
 
@@ -21,8 +23,8 @@ const dailyForecast = props => {
             date={formattedDate}
             icon={Day.Icon}
             iconPhrase={Day.IconPhrase}
-            minTemperature={`${Temperature.Minimum.Value} °C`}
-            maxTemperature={`${Temperature.Maximum.Value} °C`}
+            minTemperature={`${Temperature.Minimum.Value}°`}
+            maxTemperature={`${Temperature.Maximum.Value}°`}
             precipitation={`${Day.RainProbability}%`}
           />
         )

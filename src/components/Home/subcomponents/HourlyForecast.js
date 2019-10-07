@@ -3,27 +3,31 @@ import moment from 'moment'
 import PropTypes from 'prop-types'
 import HourlyForecastItem from './HourlyForecastItem'
 
+import './HourlyForecast.css'
+
 const hourlyForecast = props => {
   const {forecastList} = props
 
   return (
-    <ul className="weather-hourly-forecast">
-      {forecastList.map(forecast => {
-        const {EpochDateTime, DateTime, Temperature, WeatherIcon} = forecast
+    <div className="weather-hourly-forecast">
+      <ul>
+        {forecastList.map(forecast => {
+          const {EpochDateTime, DateTime, Temperature, WeatherIcon} = forecast
 
-        const time = moment(DateTime).format('hh a')
+          const time = moment(DateTime).format('h:mm')
 
-        return (
-          <HourlyForecastItem
-            key={EpochDateTime}
-            time={time}
-            status={false}
-            weatherIcon={WeatherIcon}
-            temperature={`${Temperature.Value} °C`}
-          />
-        )
-      })}
-    </ul>
+          return (
+            <HourlyForecastItem
+              key={EpochDateTime}
+              time={time}
+              status={false}
+              weatherIcon={WeatherIcon}
+              temperature={`${Temperature.Value}°`}
+            />
+          )
+        })}
+      </ul>
+    </div>
   )
 }
 

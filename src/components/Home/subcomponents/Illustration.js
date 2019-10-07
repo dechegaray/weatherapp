@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {getIconClassByIconWeatherId} from '../../../utils/iconUtils'
 
+import './Illustration.css'
+
 const illustration = props => {
   const {
     location,
@@ -16,14 +18,14 @@ const illustration = props => {
 
   return (
     <div className="weather-illustration">
-      <a href="./">
+      <a className="weather-location" href="./">
         <FontAwesomeIcon icon="map-marker-alt" />
-        {location}
+        <p>{location}</p>
       </a>
-      <FontAwesomeIcon icon={icon} title={weatherText} />
       <h1>
         {temperature} {temperatureUnit}
       </h1>
+      <FontAwesomeIcon icon={icon} title={weatherText} />
     </div>
   )
 }

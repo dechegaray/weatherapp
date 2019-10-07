@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  align-content: stretch;
+  width: calc(100% - 60px);
+  height: auto;
+  overflow: hidden;
+  list-style: none;
+  bottom: 0;
+  margin: 0;
+  padding: 10px 10px 0;
+  background-color: white;
+}
+
+.navbar > li {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar > li > a {
+  text-decoration: none;
+}
+
+.navbar > li > a > svg {
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.navbar > li > a > p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.navbar > li > a > .highlighter {
+  width: 45px;
+  height: 5px;
+  margin: 10px auto 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: white;
+  transition: all 0.5s;
+}
+
+.navbar > li > a:hover > .highlighter {
+  background-color: blue;
+}
+
+.navbar > li > a > .highlighter.active {
+  background-color: purple;
+}

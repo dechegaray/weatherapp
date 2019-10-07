@@ -11,7 +11,7 @@ const hourlyForecastItem = props => {
   return (
     <li className={status ? 'active' : ''}>
       <div>
-        <p>{time}</p>
+        <span>{time}</span>
         <p>{temperature}</p>
       </div>
       <FontAwesomeIcon icon={icon} />

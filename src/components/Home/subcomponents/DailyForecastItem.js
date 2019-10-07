@@ -21,17 +21,17 @@ const dailyForecastItem = props => {
       <div title={iconPhrase}>
         <FontAwesomeIcon icon={weatherIcon} />
       </div>
-      <div>
+      <div className="multiline">
         <p>{day}</p>
         <span>{date}</span>
       </div>
       <div>
-        <p>{minTemperature}</p>
+        <p className="temperature">{minTemperature}</p>
       </div>
       <div>
-        <p>{maxTemperature}</p>
+        <p className="temperature">{maxTemperature}</p>
       </div>
-      <div>
+      <div className="multiline">
         <p>Rain</p>
         <span>{precipitation}</span>
       </div>

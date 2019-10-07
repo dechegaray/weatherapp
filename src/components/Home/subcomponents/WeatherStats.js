@@ -2,6 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import WeatherStatsItem from './WeatherStatsItem'
 
+import './WeatherStats.css'
+
 const weatherStats = props => {
   const {
     realFeel,
@@ -23,48 +25,45 @@ const weatherStats = props => {
       <div>
         <WeatherStatsItem
           text="Real feel"
-          color="blue"
+          color="#999"
           value={realFeel}
           maxValue={70}
           unit={realFeelUnit}
         />
         <WeatherStatsItem
           text="Wind Speed"
-          color="yellow"
+          color="#999"
           value={windSpeed}
           maxValue={300}
           unit={windSpeedUnit}
         />
-      </div>
-      <hr />
-      <div>
         <WeatherStatsItem
           text="Pressure"
-          color="aqua"
+          color="#999"
           value={pressure}
           maxValue={100}
           unit={pressureUnit}
         />
-        <WeatherStatsItem
-          text="Humidity"
-          color="purple"
-          value={humidity}
-          maxValue={100}
-          unit={humidityUnit}
-        />
       </div>
       <hr />
       <div>
         <WeatherStatsItem
+          text="Humidity"
+          color="#999"
+          value={humidity}
+          maxValue={100}
+          unit={humidityUnit}
+        />
+        <WeatherStatsItem
           text="UV Index"
-          color="aqua"
+          color="#999"
           value={uvIndex}
           maxValue={50}
           unit={uvIndexUnit}
         />
         <WeatherStatsItem
           text="Visibility"
-          color="purple"
+          color="#999"
           value={visibility}
           maxValue={100}
           unit={visibilityUnit}

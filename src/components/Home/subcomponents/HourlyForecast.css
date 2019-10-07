@@ -1,0 +1,71 @@
+:root {
+  --default-gray: #aaaaaa;
+  --default-dark-gray: #333333;
+}
+
+.weather-hourly-forecast {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.weather-hourly-forecast > ul {
+  width: 150%;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather-hourly-forecast > ul > li {
+  flex: 1;
+  margin: 0;
+  cursor: pointer;
+}
+
+.weather-hourly-forecast > ul > li > div {
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  padding: 6px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.weather-hourly-forecast > ul > li:hover > div {
+  box-shadow: 0px 10px 9px -4px rgba(204, 204, 204, 1);
+  -webkit-box-shadow: 0px 10px 9px -4px rgba(204, 204, 204, 1);
+  -moz-box-shadow: 0px 10px 9px -4px rgba(204, 204, 204, 1);
+}
+
+.weather-hourly-forecast > ul > li > div > span {
+  font-size: 0.7em;
+  margin: 0 0 10px 0;
+  color: var(--default-gray);
+}
+
+.weather-hourly-forecast > ul > li > div > p {
+  font-size: 0.8em;
+  margin: 15px 0 0 0;
+  color: var(--default-gray);
+}
+
+.weather-hourly-forecast > ul > li > svg {
+  font-size: 0.8em;
+  color: var(--default-gray);
+}
+
+.weather-hourly-forecast > ul > li:hover > div > span {
+  color: var(--default-dark--gray);
+}
+
+.weather-hourly-forecast > ul > li:hover > div > p {
+  color: var(--default-dark-gray);
+}
+
+.weather-hourly-forecast > ul > li:hover > svg {
+  color: var(--default-dark--gray);
+}

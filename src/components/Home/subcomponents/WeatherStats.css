@@ -1,0 +1,15 @@
+.weather-stats {
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.weather-stats > div {
+  display: flex;
+  padding: 0 40px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.weather-stats hr {
+  border: solid thin #f0f0f0;
+}

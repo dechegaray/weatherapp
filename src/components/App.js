@@ -6,6 +6,9 @@ import './App.css'
 
 import {library} from '@fortawesome/fontawesome-svg-core'
 import {
+  faHome,
+  faCompass,
+  faCog,
   faBolt,
   faWind,
   faSmog,
@@ -27,6 +30,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
+  faHome,
+  faCompass,
+  faCog,
   faBolt,
   faWind,
   faSmog,
