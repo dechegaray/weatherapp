@@ -14,7 +14,7 @@ const hourlyForecastItem = props => {
         <span>{time}</span>
         <p>{temperature}</p>
       </div>
-      <FontAwesomeIcon icon={icon} />
+      <FontAwesomeIcon icon={icon} size="lg" />
     </li>
   )
 }

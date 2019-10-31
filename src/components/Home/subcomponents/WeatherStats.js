@@ -41,7 +41,7 @@ const weatherStats = props => {
           text="Pressure"
           color="#999"
           value={pressure}
-          maxValue={100}
+          maxValue={2000}
           unit={pressureUnit}
         />
       </div>
@@ -77,9 +77,15 @@ export default weatherStats
 
 weatherStats.propTypes = {
   realFeel: PropTypes.number.isRequired,
+  realFeelUnit: PropTypes.string.isRequired,
   windSpeed: PropTypes.number.isRequired,
+  windSpeedUnit: PropTypes.string.isRequired,
   pressure: PropTypes.number.isRequired,
+  pressureUnit: PropTypes.string.isRequired,
   humidity: PropTypes.number.isRequired,
+  humidityUnit: PropTypes.string.isRequired,
   uvIndex: PropTypes.number.isRequired,
+  uvIndexUnit: PropTypes.string.isRequired,
   visibility: PropTypes.number.isRequired,
+  visibilityUnit: PropTypes.string.isRequired,
 }

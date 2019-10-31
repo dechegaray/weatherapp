@@ -5,6 +5,16 @@ import './WeatherStatsItem.css'
 
 const weatherStatsItem = props => {
   const {text, color, value, maxValue, unit} = props
+
+  if (value > maxValue) {
+    return (
+      <div className="error-wrapper">
+        The value: {value} cannot be greater than the maxValue: {maxValue},
+        provide valid props
+      </div>
+    )
+  }
+
   const barHeight = (value / maxValue) * 100
 
   return (

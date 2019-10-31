@@ -5,7 +5,7 @@ import WeatherStats from './subcomponents/WeatherStats'
 import HourlyForecast from './subcomponents/HourlyForecast'
 import DailyForecast from './subcomponents/DailyForecast'
 
-import {mockFetchCurrentAndForecastWeatherByLocation} from '../../utils/api'
+import {fetchCurrentAndForecastWeatherByLocation} from '../../utils/api'
 
 class Home extends Component {
   constructor(props) {
@@ -21,11 +21,11 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    console.log('[COMPONENT DID MOUNT]')
+    //console.log('[COMPONENT DID MOUNT]')
     const {location} = this.state
 
-    //fetchCurrentAndForecastWeatherByLocation(location)
-    mockFetchCurrentAndForecastWeatherByLocation(location)
+    //mockFetchCurrentAndForecastWeatherByLocation(location)
+    fetchCurrentAndForecastWeatherByLocation(location)
       .then(data => {
         const {currentWeather, hourlyForecast, dailyForecast} = data
 
@@ -41,7 +41,7 @@ class Home extends Component {
   }
 
   render() {
-    console.log('[RENDER METHOD]')
+    //console.log('[RENDER METHOD]')
     const {
       location,
       currentWeather,
@@ -60,24 +60,24 @@ class Home extends Component {
           <div>
             <Illustration
               location={location}
-              temperature={currentWeather.temperature}
-              temperatureUnit={currentWeather.temperatureUnit}
-              weatherIcon={currentWeather.weatherIcon}
-              weatherText={currentWeather.weatherText}
+              temperature={currentWeather.Temperature.Metric.Value}
+              temperatureUnit="°C"
+              weatherIcon={currentWeather.WeatherIcon}
+              weatherText={currentWeather.WeatherText}
             />
             <WeatherStats
-              realFeel={currentWeather.realFeel}
-              realFeelUnit={currentWeather.realFeelUnit}
-              humidity={currentWeather.humidity}
-              humidityUnit={currentWeather.humidityUnit}
-              windSpeed={currentWeather.windSpeed}
-              windSpeedUnit={currentWeather.windSpeedUnit}
-              uvIndex={currentWeather.uvIndex}
-              uvIndexUnit={currentWeather.uvIndexUnit}
-              pressure={currentWeather.pressure}
-              pressureUnit={currentWeather.pressureUnit}
-              visibility={currentWeather.visibility}
-              visibilityUnit={currentWeather.visibilityUnit}
+              realFeel={currentWeather.RealFeelTemperature.Metric.Value}
+              realFeelUnit="°C"
+              humidity={currentWeather.RelativeHumidity}
+              humidityUnit="%"
+              windSpeed={currentWeather.Wind.Speed.Metric.Value}
+              windSpeedUnit="km/h"
+              uvIndex={currentWeather.UVIndex}
+              uvIndexUnit=""
+              pressure={currentWeather.Pressure.Metric.Value}
+              pressureUnit="mb"
+              visibility={currentWeather.Visibility.Metric.Value}
+              visibilityUnit="km"
             />
           </div>
         ) : (

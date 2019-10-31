@@ -27,7 +27,8 @@
 }
 
 .weather-daily-forecast > li > div > svg {
-  margin-top: 10px;
+  font-size: 1.2em;
+  margin-top: 9px;
 }
 
 .weather-daily-forecast > li > div > p {
